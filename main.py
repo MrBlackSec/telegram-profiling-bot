@@ -5,8 +5,8 @@ from telegram.ext import ApplicationBuilder, CommandHandler, CallbackQueryHandle
 import json
 import os
 
-TOKEN = os.environ.get("TELEGRAM_TOKEN")
-ADMIN_ID = 7667183892
+TOKEN = os.getenv("TELEGRAM_TOKEN")
+ADMIN_ID = int(os.getenv("ADMIN_ID"))
 
 # Tambahan: Mode Maintenance
 MAINTENANCE_MODE = {"active": False, "message_ids": {}}
